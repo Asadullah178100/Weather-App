@@ -11,4 +11,13 @@ form.addEventListener("submit", (event) => {
   axios(
     `http://api.weatherapi.com/v1/current.json?key=b4db485d7c4c485fa6d84351232508&q=${city.value}&aqi=no`
   )
+  .then((res) => {
+    console.log(res.data);
+    card.innerHTML = `
     
+    `;
+  })
+  .catch((err) => {
+    console.log("error===>", err);
+  });
+});
